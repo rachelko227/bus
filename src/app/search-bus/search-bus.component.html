@@ -1,0 +1,68 @@
+<div class="ui raised segment" >
+    <h2 class="ui header">Search for Bus</h2>
+    <form 
+        [formGroup]="searchBusForm"
+        (ngSubmit)="onSubmit(searchBusForm.value)"
+        class="ui form">
+      <div class="field">
+        <label for="searchKey">{{ searchType }}</label>
+        <input type="text" 
+          id="searchKey" 
+          placeholder=""
+          formControlName="searchKey">
+      </div>
+  
+      <button type="submit" class="fluid black medium ui button icon searchIcon">
+        <img src="./assets/images/search_icon.png" alt="search">
+      </button>
+    </form>
+
+  
+
+    <div>
+      <p></p>
+      <div>
+        <table class="ui striped table" border=1>
+          <tr>
+            <th>Route ID</th>
+            <th>Company Code</th>
+            <th>Route Namee</th>
+            <th>Route Type</th>
+            <th>Service Mode</th>
+            <th>Special Type</th>
+            <th>Journey Time</th>
+            <th>Loc Start Name</th>
+            <th>Loc End Name</th>
+            <th>hyperlinkE</th>
+            <th>Full Fare</th>
+          </tr>
+
+          <tr *ngFor="let bus of serverDataArr">
+            <td>{{bus.routeID}}</td>
+            <td>{{bus.companyCode}}</td>
+            <td>{{bus.routeNamee}}</td>
+            <td>{{bus.routeType}}</td>
+            <td>{{bus.serviceMode}}</td>
+            <td>{{bus.specialType}}</td>
+            <td>{{bus.journeyTime}} mins</td>
+            <td>{{bus.locStartNamee}}</td>
+            <td>{{bus.locEndNamee}}</td>
+            <td>{{bus.hyperlinkE}}</td>
+            <td>${{bus.fullFare}}</td>
+            <td>
+              <button class="medium ui basic button icon searchIcon" (click)="deleteButtonHandler(bus.routeNamee)">
+                <img src="./assets/images/delete_icon.png" alt="delete">
+              </button>
+            </td>
+            <td>
+              <button class="medium ui basic button icon searchIcon" (click)="editButtonHandler(bus.routeNamee)">
+                <img src="./assets/images/edit_icon.png" alt="edit">
+              </button>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+    </div>
+  </div>
+  

@@ -1,0 +1,107 @@
+<div class="ui raised segment">
+    <h2 class="ui header">Edit Bus Route</h2>
+    <form 
+        [formGroup]="editBusForm"
+        (ngSubmit)="onSubmit(editBusForm.value)" class="ui form">
+        <div class="field">
+          <label for="routeID">Route ID</label>
+          <input type="text" 
+            id="routeID" 
+            placeholder=""
+            formControlName="routeID">
+        </div>
+  
+        <div class="field">
+          <label for="companyCode">Company Code</label>
+          <input type="text" 
+            id="companyCode" 
+            placeholder=""
+            formControlName="companyCode">
+        </div>
+        
+        <div class="field">
+          <label for="routeNamee">Route Namee</label>
+          <input type="text" 
+            id="routeNamee" 
+            placeholder=""
+            formControlName="routeNamee">
+        </div>
+
+        <div class="field">
+          <label for="routeType">Route Type</label>
+          <input type="text" 
+            id="routeType" 
+            placeholder=""
+            formControlName="routeType">
+        </div>
+    
+        <div class="field">
+          <label for="serviceMode">Service Mode</label>
+          <input type="text" 
+            id="serviceMode" 
+            placeholder=""
+            formControlName="serviceMode">
+        </div>
+  
+        <div class="field">
+          <label for="specialType">Special Type</label>
+          <input type="text" 
+            id="specialType" 
+            placeholder=""
+            formControlName="specialType">
+        </div>
+  
+        <div class="field">
+          <label for="journeyTime">Journey Time</label>
+          <input type="text" 
+            id="journeyTime" 
+            placeholder=""
+            formControlName="journeyTime">
+        </div>
+  
+        <div class="field">
+          <label for="locStartNamee">Loc Start Namee</label>
+          <input type="text" 
+            id="locStartNamee" 
+            placeholder=""
+            formControlName="locStartNamee">
+        </div>
+  
+        <div class="field">
+          <label for="locEndNamee">Loc End Namee</label>
+          <input type="text" 
+            id="locEndNamee" 
+            placeholder=""
+            formControlName="locEndNamee">
+        </div>
+
+        <div class="field">
+          <label for="hyperlink">HyperlinkE</label>
+          <input type="text" 
+            id="hyperlinkE" 
+            placeholder=""
+            formControlName="hyperlinkE">
+        </div>
+    
+        <div class="field">
+          <label for="fullFare">Full Fare</label>
+          <input type="text" 
+            id="fullFare" 
+            placeholder=""
+            formControlName="fullFare">
+        </div>
+
+      <button type="submit" class="fluid basic medium ui button icon searchIcon">
+        <img src="./assets/images/submit_icon.png" alt="submit">
+      </button>
+      <button class="fluid basic medium ui button icon searchIcon" (click)="cancelButtonHandler()">
+        <img src="./assets/images/cancel_icon.png" alt="cancel">
+      </button>
+    </form>
+    <div>
+        <pre>{{ serverData | json }} </pre>
+    </div>
+
+  </div>
+  
+

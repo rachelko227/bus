@@ -1,0 +1,135 @@
+h2 {
+	margin: 2em 0em;
+}
+.ui.container {
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+body {
+	background-color: #ffffff;
+}
+.ui.menu .item img.logo {
+	margin-right: 1.5em;
+}
+.main.container {
+	margin-top: 4em;
+}
+.wireframe {
+	margin-top: 2em;
+}
+.ui.footer.segment {
+	margin: 5em 0em 0em;
+	padding: 5em 0em;
+}
+.ui.one.column.divided.grid.text {
+	text-align-last: center;
+}
+/* Admin - adjust img and font */
+.containerImg img {
+	filter: brightness(110%);
+	width: 100%;
+	height: 50%;
+}
+.containerImg {
+	position: relative;
+}
+.centerImg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 40px;
+	color: white;
+	text-shadow: 0 0 1px #000000, 0 0 1px #000000, 0 0 10px #ffffff,
+		0 0 10px #000000, 0 0 10px #000000;
+}
+@media only screen and (max-width: 860px) {
+	.centerImg {
+		font-size: 22px;
+	}
+}
+/* search css */
+.ui.icon.button.searchIcon img {
+	width: 25px;
+	height: 25px;
+}
+.ui.accordion .accordion .title,
+.ui.accordion .title.searchResult {
+	cursor: auto;
+}
+.title.searchResult {
+	cursor: auto;
+}
+.ui.styled.accordion.searchBox {
+	width: 100%;
+}
+/* manage div */
+.manageDiv {
+	margin-top: 3em;
+}
+
+/* Passenger - P2P */
+.ui.input.p2p input {
+	width: 100%;
+}
+
+/* Admin - Search */
+.adminSearchTableDiv {
+	width: 95%;
+	margin: auto;
+	padding-top: 20px;
+}
+.attached.ui.celled.selectable.table.adminSearchTable {
+	overflow-wrap: anywhere;
+	border-radius: 5px;
+}
+.ui.bottom.attached.segment.adminTableDiv {
+	border: white;
+}
+
+.ui.green.label.item.adminLabels {
+	border-radius: 0px;
+}
+.ui.orange.label.item.adminLabels {
+	border-radius: 0px;
+}
+.ui.red.label.item.adminLabels {
+	border-radius: 0px;
+}
+.fluid.ui.button.icon.searchIcon {
+	margin-top: 10px;
+}
+#journeyTimeIns,
+#routeNameIns {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+#locStartNameIns {
+	margin-right: 10px;
+}
+#hyperlinkIns {
+	margin-right: 10px;
+}
+#companyCodeUpd,
+#specialTypeUpd,
+#journeyTimeUpd {
+	margin-left: 10px;
+}
+#locStartNameUpd,
+#routeNameUpd {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+#hyperlinkUpd {
+	margin-right: 10px;
+}
+.displayNone {
+	display: none;
+}
+.displayInherit {
+	display: inherit;
+}
+.four.big.ui.buttons.actions {
+	padding: 11px;
+}

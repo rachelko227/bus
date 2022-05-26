@@ -1,0 +1,68 @@
+<div class="four big ui buttons actions">
+  <button class="ui button active" (click)="clickHandler('routeActive')" [ngClass]="{'active': routeActive, '': !routeActive}">Route Name</button>
+  <button class="ui button" (click)="clickHandler('currentActive')" [ngClass]="{'active': currentActive, '': !currentActive}">Current Location</button>
+  <button class="ui button" (click)="clickHandler('startActive')" [ngClass]="{'active': startActive, '': !startActive}">Start Point</button>
+  <button class="ui button" (click)="clickHandler('endActive')" [ngClass]="{'active': endActive, '': !endActive}">End Point</button>
+</div>
+
+<div class="ui one column divided grid text">
+  <div class="row">
+    <div class="column">
+      <p>
+        <app-search-bus class="displayInherit" [ngClass]="{'displayInherit': routeActive, 'displayNone': !routeActive}" searchType="By Route" (deleteEvent)="deleteEventReceiver($event)" (editEvent)="editEventReceiver($event)"></app-search-bus>
+      </p>
+    </div>
+    <div class="column">
+      <p>
+        <app-search-bus class="displayInherit" [ngClass]="{'displayInherit': currentActive,
+                         'displayNone': !currentActive}" searchType="By Current Location" 
+                         (deleteEvent)="deleteEventReceiver($event)" (editEvent)="editEventReceiver
+                         ($event)"></app-search-bus>
+      </p>
+    </div>
+
+    <div class="column">
+      <p>
+        <app-search-bus class="displayInherit" [ngClass]="{'displayInherit': startActive, 'displayNone': !startActive}" searchType="By Start Point" (deleteEvent)="deleteEventReceiver($event)" (editEvent)="editEventReceiver($event)"></app-search-bus>
+      </p>
+    </div>
+    <div class="column">
+      <p>
+        <app-search-bus class="displayInherit" [ngClass]="{'displayInherit': endActive, 'displayNone': !endActive}" searchType="By End Point" (deleteEvent)="deleteEventReceiver($event)" (editEvent)="editEventReceiver($event)"></app-search-bus>
+      </p>
+    </div>
+  </div>
+</div>
+<div class="four big ui buttons actions">
+  <button class="fluid green medium ui button icon searchIcon" (click)="createHandler(createActive)" [ngClass]="{'active': createActive, '': !createActive}">
+    <img src="./assets/images/insert_icon.png" alt="search">
+  </button>
+</div>
+
+<div class="ui three column divided grid text">
+  <div class="row">
+    <div class="column">
+      <p>
+        <app-create-bus class="displayNone" [ngClass]="{'displayInherit': createActive, 
+                                            'displayNone': !createActive}"></app-create-bus>
+      </p>
+    </div>
+    <div class="column">
+      <p>
+        <app-delete-bus *ngIf="deleteEventTriggered" [busRecord]="this.busRecord" 
+                          (cancelDeleteEvent)="cancelDeleteEventReceiver()"></app-delete-bus>
+      </p>
+    </div> 
+      <div class="column">
+        <p>
+          <app-edit-bus *ngIf="editEventTriggered" [busRecord]="this.busRecord" (cancelEditEvent)=
+                                                "cancelEditEventReceiver()"></app-edit-bus>
+        </p>
+      </div>
+  </div>
+
+ 
+  
+
+</div>
+

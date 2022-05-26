@@ -1,0 +1,107 @@
+<div class="ui raised segment">
+    <h2 class="ui header">Delete Bus Route</h2>
+    <form 
+        [formGroup]="deleteBusForm"
+        (ngSubmit)="onSubmit(deleteBusForm.value)" class="ui form">
+      <div class="field">
+        <label for="routeID">Route ID</label>
+        <input type="text" 
+          id="routeID" 
+          placeholder=""
+          [formControl]="deleteBusForm.controls['routeID']">
+      </div>
+
+      <div class="field">
+        <label for="companyCode">Company Code</label>
+        <input type="text" 
+          id="companyCode" 
+          placeholder=""
+          [formControl]="deleteBusForm.controls['companyCode']">
+      </div>
+      
+      <div class="field">
+        <label for="routeNamee">Route Namee</label>
+        <input type="text" 
+          id="routeNamee" 
+          placeholder=""
+          [formControl]="deleteBusForm.controls['routeNamee']">
+      </div>
+
+      <div class="field">
+        <label for="routeType">Route Type</label>
+        <input type="text" 
+          id="routeType" 
+          placeholder=""
+          [formControl]="deleteBusForm.controls['routeType']">
+      </div>
+  
+      <div class="field">
+        <label for="serviceMode">Service Mode</label>
+        <input type="text" 
+          id="serviceMode" 
+          placeholder=""
+          [formControl]="deleteBusForm.controls['serviceMode']">
+      </div>
+
+      <div class="field">
+        <label for="specialType">Special Type</label>
+        <input type="text" 
+          id="specialType" 
+          placeholder=""
+          [formControl]="deleteBusForm.controls['specialType']">
+      </div>
+
+      <div class="field">
+        <label for="journeyTime">Journey Time</label>
+        <input type="text" 
+          id="journeyTime" 
+          placeholder=""
+          [formControl]="deleteBusForm.controls['journeyTime']">
+      </div>
+
+      <div class="field">
+        <label for="locStartNamee">Loc Start Namee</label>
+        <input type="text" 
+          id="locStartNamee" 
+          placeholder=""
+          [formControl]="deleteBusForm.controls['locStartNamee']">
+      </div>
+
+      <div class="field">
+        <label for="locEndNamee">Loc End Namee</label>
+        <input type="text" 
+          id="locEndNamee" 
+          placeholder=""
+          [formControl]="deleteBusForm.controls['locEndNamee']">
+      </div>
+
+      <div class="field">
+        <label for="hyperlinkE">Hyperlink</label>
+        <input type="text" 
+          id="hyperlinkE" 
+          placeholder=""
+          [formControl]="deleteBusForm.controls['hyperlinkE']">
+      </div>
+  
+      <div class="field">
+        <label for="fullFare">Full Fare</label>
+        <input type="text" 
+          id="fullFare" 
+          placeholder=""
+          [formControl]="deleteBusForm.controls['fullFare']">
+      </div>
+
+      <button type="submit" class="fluid basic medium ui button icon searchIcon">
+        <img src="./assets/images/submit_icon.png" alt="submit">
+      </button>
+      <button class="fluid basic medium ui button icon searchIcon" (click)="cancelButtonHandler()">
+        <img src="./assets/images/cancel_icon.png" alt="cancel">
+      </button>
+    </form>
+    <div>
+        <pre>{{ serverData | json }} </pre>
+    </div>
+
+  </div>
+  
+
